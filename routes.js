@@ -17,4 +17,20 @@ router.get("/", function(req, res, next){
 	});
 });
 
+router.get("/login", function(req, res, next){
+	User.find().sort({createdAt: "descending"}).exec(function(err, users){
+		if(err)
+			return next(err);
+		res.render("login", {users:users});
+	});
+});
+
+router.get("/signup", function(req, res, next){
+	User.find().sort({createdAt: "descending"}).exec(function(err, users){
+		if(err)
+			return next(err);
+		res.render("signup", {users:users});
+	});
+});
+
 module.exports = router;
