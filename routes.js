@@ -25,6 +25,13 @@ router.get("/login", function(req, res, next){
 	});
 });
 
+router.post("/login", function(req,res,next){
+	if(err)
+		return next(err);
+	req.locals.curentUser = res.user;
+    next();
+});
+
 router.get("/signup", function(req, res, next){
 	User.find().sort({createdAt: "descending"}).exec(function(err, users){
 		if(err)

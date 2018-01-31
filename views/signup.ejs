@@ -1,15 +1,18 @@
 <% include _header %>
-
 	<h1>Welcome back, Log in here!</h1>
-	<div class = "form-group" method="post">
+	<div class = "form-group">
 		<label for = "username">Username:   </label>
 		<input class = "form-group" type = "username" id = "username" placeholder = "Enter username" name = "username">
 	</div>
-		<div class = "form-group">
+	<div class = "form-group">
 		<label for = "password">Password:   </label>
 		<input class = "form-group" type = "password" id = "password" placeholder = "Enter password" name = "password">
 	</div>
+	<div class = "form-group">
+		<label for = "password">Verify</br> Password:   </label>
+		<input class = "form-group" type = "password" id = "passwordVer" placeholder = "Re-enter password" name = "passwordVer">
+	</div>
 	<div>
-		<input type = "submit" class = "btn btn-default">Log In!</button>
+		<button type = "submit" class = "btn btn-default">Sign up!</button>
 	</div>
 <% include _footer %>
